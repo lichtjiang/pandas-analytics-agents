@@ -1,0 +1,37 @@
+[project]
+name = "pandas-analytics-agents"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "agent-framework>=1.19.0",
+    "dotenv>=0.9.9",
+    "duckdb>=1.5.6",
+    "grandalf>=0.8",
+    "langchain>=1.4.3",
+    "langchain-openai>=1.6.6",
+    "langgraph>=1.2.12",
+    "matplotlib>=3.11.2",
+    "opentelemetry-exporter-otlp-proto-grpc>=1.44.0",
+    "pandas>=3.0.6",
+    "pydantic>=2.13.5",
+    "seaborn>=0.13.2",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+pandas_analytics_agents = ["dataset/covid19_country_wise_latest.csv"]
+
+[dependency-groups]
+dev = [
+    "ipython>=9.17.1",
+]
